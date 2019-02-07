@@ -26,7 +26,7 @@ public class Main {
         String firstSentence = "";
         int wordCount = 0;
         int letterCount = 0;
-        float averageWordLength;
+        double averageWordLength;
 
         // Read File to String
         try {
