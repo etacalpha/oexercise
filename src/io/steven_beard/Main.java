@@ -24,8 +24,8 @@ public class Main {
         String fileString = "";
         String largestword = "";
         String firstSentence = "";
-        int wordCount = 0;
-        int letterCount = 0;
+        double wordCount = 0;
+        double letterCount = 0;
         double averageWordLength;
 
         // Read File to String
@@ -59,7 +59,7 @@ public class Main {
         }
         averageWordLength = letterCount / wordCount;
 
-        System.out.println("The largest word is " + largestword+".");
+        System.out.println("The largest word is " + largestword +".");
         System.out.println("The first sentence using the largest word is \"" + firstSentence +".\"");
         System.out.println("The average word length is " + averageWordLength + " letters.");
     }
