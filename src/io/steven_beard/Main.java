@@ -26,7 +26,7 @@ public class Main {
         String firstSentence = "";
         int wordCount = 0;
         int letterCount = 0;
-        int averageWordLength;
+        float averageWordLength;
 
         // Read File to String
         try {
@@ -55,7 +55,6 @@ public class Main {
             }
             if (s.contains(largestword)) {
                 firstSentence = s;
-                break;
             }
         }
         averageWordLength = letterCount / wordCount;
