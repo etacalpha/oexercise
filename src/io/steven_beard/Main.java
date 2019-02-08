@@ -7,13 +7,13 @@ import java.nio.file.Paths;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        getLargestWordAndWordCount();
+        System.out.println(getLargestWordAndWordCount("./passage.txt"));
     }
 
 
-    private static void getLargestWordAndWordCount() {
+    public static String getLargestWordAndWordCount(String filePath) throws IOException {
     /*
        Identifies the word in file with the maximum word length (largestWord)
        Once the word with maximum length has been identified,
@@ -28,12 +28,11 @@ public class Main {
         double letterCount = 0;
         double averageWordLength;
 
+
         // Read File to String
-        try {
-            fileString = new String(Files.readAllBytes(Paths.get("./passage.txt")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+            fileString = new String(Files.readAllBytes(Paths.get(filePath)));
+
 
         // Check file for punctuations that have no white space after them. Add white space
         // https://stackoverflow.com/questions/2973436/regex-lookahead-lookbehind-and-atomic-groups
@@ -59,9 +58,9 @@ public class Main {
         }
         averageWordLength = letterCount / wordCount;
 
-        System.out.println("The largest word is " + largestword +".");
-        System.out.println("The first sentence using the largest word is \"" + firstSentence +".\"");
-        System.out.println("The average word length is " + averageWordLength + " letters.");
+        return "The largest word is " + largestword + "." + "\n" +
+                "The first sentence using the largest word is \"" + firstSentence + ".\"" + "\n" +
+                "The average word length is " + averageWordLength + " letters.";
     }
 }
 

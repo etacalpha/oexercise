@@ -1,0 +1,4 @@
+This is a test File. I am using this file to test the exercise I failed in order to learn how to write jUnit test.
+There needs to be a really long word in this file and I need to get the exact word count and average word length. I think for
+my really long word I will use Antidisestablishmentarianism. This is a really long word. I do not know the average length of words
+but I will look online or in MSWord to see if I can find it.
